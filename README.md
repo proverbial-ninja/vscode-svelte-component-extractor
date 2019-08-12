@@ -10,5 +10,5 @@ This extension creates a new svelte component from higlighted text.
 4. Input new component Name
 5. Your new component is created and imported
 
-![Svelte Component Extractor Demo](extractor.gif)
+![Svelte Component Extractor Demo](https://media.giphy.com/media/UthaofeoJ7Dx4fGFAu/giphy.gif)
 
