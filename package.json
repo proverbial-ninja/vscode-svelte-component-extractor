@@ -1,5 +1,5 @@
 {
-	"name": "svelte-component-extractor",
+	"name": "svelte-extractor",
 	"displayName": "Svelte Component Extractor",
 	"publisher": "proverbialninja",
 	"description": "Extracts highlighted code and creates a new component.",

@@ -1,4 +1,4 @@
-# svelte-extractor 
+# Svelte Component Extractor 
 
 This extension creates a new svelte component from higlighted text.
 
@@ -9,4 +9,6 @@ This extension creates a new svelte component from higlighted text.
 3. Select "Svelte Extract Component"
 4. Input new component Name
 5. Your new component is created and imported
+
+![Svelte Component Extractor Demo](extractor.gif)
 
