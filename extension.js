@@ -55,7 +55,48 @@ function activate(context) {
 
 
 			//Replace selection with new component name
-			editor.edit(builder => builder.replace(selection, `<${output}/>`))
+			editor.edit(builder => builder.replace(selection, `<${output}/>`)).then(
+				function () {
+					var firstLine = editor.document.lineAt(0);
+					var lastLine = editor.document.lineAt(editor.document.lineCount - 1);
+					var textRange = new vscode.Range(0,
+						firstLine.range.start.character,
+						editor.document.lineCount - 1,
+						lastLine.range.end.character);
+
+					//Add imports by appending to script tag if exixts or prepending it to the file if it doesnt
+					var all_text = editor.document.getText(textRange);
+					var new_text;
+
+					if (all_text.includes("<script>")) {
+						new_text = all_text.replace("<script>",
+							`<script>
+	import ${output} from "./${output}.svelte"
+					`)
+					} else {
+						new_text =
+							`<script>
+	import ${output} from "./${output}.svelte"
+</script>
+`+ all_text;
+					}
+
+
+					editor.edit(builder => builder.replace(textRange, new_text))
+
+				}
+			)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -63,13 +104,13 @@ function activate(context) {
 			//Save new component with commented out script and style tags
 			var filepath = path.join(folderPath, `${output}.svelte`);
 			var header = `<!-- <script>
-
-			</script>
+	
+</script>
 			
-			<style>
+<style>
 			
-			</style> -->
-			`
+</style> -->
+`
 			fs.writeFile(filepath, header + text, err => {
 				if (err) {
 					return vscode.window.showErrorMessage(
