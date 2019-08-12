@@ -87,20 +87,6 @@ function activate(context) {
 				}
 			)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 			//Save new component with commented out script and style tags
 			var filepath = path.join(folderPath, `${output}.svelte`);
 			var header = `<!-- <script>

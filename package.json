@@ -1,10 +1,10 @@
 {
-	"name": "svelte-extractor",
-	"displayName": "Svelte Extractor",
+	"name": "svelte-component-extractor",
+	"displayName": "Svelte Component Extractor",
 	"publisher": "proverbialninja",
 	"description": "Extracts highlighted code and creates a new component.",
 	"repository": "https://github.com/proverbial-ninja/vscode-svelte-component-extractor",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"engines": {
 		"vscode": "^1.37.0"
 	},
