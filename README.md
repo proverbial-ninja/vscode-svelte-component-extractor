@@ -1,4 +1,4 @@
-# Svelte Component Extractor 
+# svelte-extractor
 
 This extension creates a new svelte component from higlighted text.
 
@@ -12,3 +12,10 @@ This extension creates a new svelte component from higlighted text.
 
 ![Svelte Component Extractor Demo](https://media.giphy.com/media/UthaofeoJ7Dx4fGFAu/giphy.gif)
 
+
+## New Feature
+
+You can now create the new components in a subdirectory 
+(only tested on mac might break on windows)
+
+![Create Subdirectory Demo](https://media.giphy.com/media/Me18ZhF8HtTTBt6fcd/giphy.gif)
